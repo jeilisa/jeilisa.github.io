@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zermatt - Suiza Travel</title>
+  <link rel="stylesheet" href="Zermatt.css" />
+  <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/041/446/747/non_2x/switzerland-national-flag-free-png.png" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header class="header">
+  <nav class="navbar">
+    <div class="logo">
+      <span class="blanco">Switzer</span><span class="rojo">land</span>
+    </div>
+     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">&#9776;</button>
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="index.html#experiencias">Experiencias</a></li> 
+      <li><a href="index.html#rutas">Rutas</a></li>             
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<section class="video-section">
+  <video autoplay muted loop>
+    <source src="https://cdn.pixabay.com/video/2023/01/05/145447-787039494_large.mp4" type="video/mp4">
+  </video>
+  <div class="video-overlay">
+    <h1>Zermatt</h1>
+    <p>Un encantador pueblo suizo al pie del majestuoso Matterhorn.</p>
+  </div>
+</section>
+
+
+<section class="actividades">
+  <h1>Actividades en Zermatt</h1>
+  <div class="actividades-grid">
+    <div class="actividad">
+      <img src="https://cdn.pixabay.com/photo/2016/11/06/17/11/zermatt-1803481_1280.jpg" alt="Matterhorn">
+      <p>Excursión al Matterhorn</p>
+    </div>
+    <div class="actividad">
+      <img src="https://cdn.pixabay.com/photo/2023/01/11/19/53/hiking-7712678_1280.jpg" alt="Senderismo en Zermatt">
+      <p>Senderismo por los Alpes</p>
+    </div>
+    <div class="actividad">
+      <img src="https://cdn.pixabay.com/photo/2014/06/06/20/47/gornergrat-363829_1280.jpg" alt="Tren Gornergrat">
+      <p>Viaje en tren al Gornergrat</p>
+    </div>
+  </div>
+</section>
+
+<section class="carousel-comida">
+  <h2>Platos típicos de Zermatt</h2>
+    <div class="carousel-container" id="carouselTrack">
+      <div class="comida-card">
+        <img src="https://www.swiss-finest.de/bilder/content/cpimg/wallis/kaeseschnitte/20210713_135125.jpg" alt="Käseschnitte">
+        <h3>Käseschnitte</h3>
+        <p>Tostada o gratinado de pan con queso fundido por encima, muy similar a una tostada de queso</p>
+        <div class="rating" data-id="sopa-harina">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+      </div>
+
+      <div class="comida-card">
+        <img src="https://content-cocina.lecturas.com/medio/2022/03/20/fondue-de-queso_ab200f7b_1200x1200.jpg" alt="Fondue">
+        <h3>Fondue</h3>
+        <p>Se disfruta mucho en los restaurantes después de un día en la montaña.</p>
+        <div class="rating" data-id="sopa-harina">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+      </div>
+
+      <div class="comida-card">
+        <img src="https://api.swissmilk.ch/wp-content/uploads/2019/06/aelplermagronen-mit-apfelmus-2560x1920.jpg" alt="Älplermagronen">
+        <h3>Älplermagronen</h3>
+        <p>Macarrones alpinos con queso, crema y cebolla caramelizada.</p>
+        <div class="rating" data-id="sopa-harina">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+      </div>
+
+      <div class="comida-card">
+        <img src="https://disfrutandodelacocina.com/wp-content/uploads/2019/10/chocolate-suizo-c1-500x500.jpg" alt="Chocolate Suizo">
+        <h3>Chocolate Suizo</h3>
+        <p>Suiza es famosa por su chocolate de alta calidad, suave y cremoso.</p>
+        <div class="rating" data-id="sopa-harina">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<script>
+  const track = document.getElementById("carouselTrack");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+
+  const slideWidth = 320;
+
+  nextBtn.addEventListener("click", () => {
+    track.scrollLeft += slideWidth;
+  });
+
+  prevBtn.addEventListener("click", () => {
+    track.scrollLeft -= slideWidth;
+  });
+</script>
+
+<section class="clima-contenedor">
+  <div class="widget-clima">
+    <h3>Tiempo de hoy</h3>
+    <div class="icono-temperatura">
+      <img src="https://img.icons8.com/ios/100/partly-cloudy-day--v1.png" alt="Clima" />
+      <div class="grados">
+        <span class="temperatura">18°</span>
+        <p class="descripcion">Parcialmente nublado</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="clima-texto">
+    <h2>Sobre el clima en Zermatt</h2>
+    <p>
+      Zermatt tiene un clima alpino con inviernos fríos y veranos frescos, ideal para actividades de montaña durante todo el año.
+    </p>
+  </div>
+</section>
+
+<section class="hoteles">
+  <h2>Hoteles en Zermatt</h2>
+  <div class="hotel-lista">
+
+    <div class="hotel">
+      <img src="https://www.rewe-reisen.de/pibe-media/der_atc/hotel/SIR30002B_S25-D02G2525_1.jpg?w=712&h=481" alt="Hotel Montaña Zermatt">
+      <h4>Hotel Montaña Zermatt</h4>
+      <p>Un acogedor hotel de montaña con vistas al Matterhorn, ideal para disfrutar de la naturaleza y el confort.</p>
+      <a class="btn-mapa" href="https://www.google.com/maps/place/Hotel+Alpen+Resort+%26+SPA/@46.0409526,7.7185059,12269m/data=!3m2!1e3!5s0x478f3674f195080f:0x117d995d1eb21c47!4m17!1m5!2m4!1sHotel+Monta%C3%B1a+Zermatt!5m2!5m1!1s2025-11-02!3m10!1s0x478f3674ee6eef57:0x9655a617bf7ba943!5m3!1s2025-11-02!4m1!1i2!8m2!3d46.0261648!4d7.7517117!15sChZIb3RlbCBNb250YcOxYSBaZXJtYXR0kgEFaG90ZWyqAVMQASoSIg5ob3RlbCBtb250YcOxYSgOMh8QASIb8opzAAYJPHui5kxhQRQ7ANOz1jevpChcETlrMhoQAiIWaG90ZWwgbW9udGHDsWEgemVybWF0dOABAA!16s%2Fg%2F1tdfm590?entry=ttu&g_ep=EgoyMDI1MDgwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Ver en el mapa</a>
+    </div>
+
+    <div class="hotel">
+      <img src="https://static.sunweb.co.uk/products/Images/Original/46500000/96000/46596640-Original.jpg" alt="Hotel Walliserhof">
+      <h4>Hotel Walliserhof</h4>
+      <p>Hotel tradicional con spa y restaurante gourmet en pleno corazón de Zermatt.</p>
+      <a class="btn-mapa" href="https://www.google.com/maps/place/Hotel+Walliserhof+Zermatt/@46.556326,7.3646342,388939m/data=!3m2!1e3!5s0x478f35d8caf64579:0xe78f5763ee636291!4m17!1m5!2m4!1sHotel+Walliserhof!5m2!5m1!1s2025-11-02!3m10!1s0x478f35df4abe3029:0xc79a7d715947d501!5m3!1s2025-11-02!4m1!1i2!8m2!3d46.0220295!4d7.7468929!15sChFIb3RlbCBXYWxsaXNlcmhvZpIBBWhvdGVsqgE6EAEyHxABIhvyI_xrM0ALXwbUotgx9ObWdUXZQnIuQ_xJ6m8yFRACIhFob3RlbCB3YWxsaXNlcmhvZuABAA!16s%2Fg%2F11f3y63v4_?entry=ttu&g_ep=EgoyMDI1MDgwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Ver en el mapa</a>
+    </div>
+
+    <div class="hotel">
+      <img src="https://images.trvl-media.com/lodging/21000000/20850000/20845100/20845060/639111d9.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Hotel Dorint Zermatt">
+      <h4>Hotel Dorint Zermatt</h4>
+      <p>Moderno hotel de cuatro estrellas con vistas panorámicas a las montañas y excelente servicio.</p>
+      <a class="btn-mapa" href="https://www.google.com/maps?sca_esv=1b131cb33424c794&biw=2048&bih=926&output=search&q=Hotel+Dorint+Zermatt&source=lnms&fbs=AIIjpHxNEHXoj-RcxdvHUo2RYoASyhSTsDywEMXdUwQwTIgp59rxmaV70lSiMDFnSY6v_7_P1uiEuXTHEML34F5KnKqwz6fCDCVhNbka9nzjITq4VQ0Kc1aGdWu8kbUSLvcjsZMDkH88gImOB674oJRSZn6fogjBxnuItbeC7j5cMiFCW4vOoXxEPDhqjXeXRPQhH7BUO8OW1kTatGx10vZZ1UtYBEQTDgE4kI9PpwVP1aDFn9arCwM&entry=mc&ved=1t:200715&ictx=111" target="_blank">Ver en el mapa</a>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  window.onload = function () {
+    var body = document.querySelector('body');
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      body.classList.add('active');
+    }
+  };
+</script>
+<script>
+
+  window.onload = function () {
+    const body = document.body;
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      body.classList.add('active');
+    }
+  };
+</script>
+<style>
+
+  html,
+  body {
+    background-color: #f0f0f0;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  body.active,
+  body.active html {
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  body.active section {
+    background-color: transparent;
+  }
+
+  body.active .actividad,
+  body.active .comida-card,
+  body.active .hotel {
+    background-color: #181818;
+    color: #ffffff;
+  }
+</style>
+<button class="btn-volver" onclick="window.history.back()">← Volver atrás</button>
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const menu = document.querySelector('.menu');
+
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+</script>
+
+</body>
+</html>
