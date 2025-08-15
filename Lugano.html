@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lugano - Suiza Travel</title>
+  <link rel="stylesheet" href="Lugano.css" />
+  <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/041/446/747/non_2x/switzerland-national-flag-free-png.png" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header class="header">
+  <nav class="navbar">
+    <div class="logo">
+      <span class="blanco">Switzer</span><span class="rojo">land</span>
+    </div>
+     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">&#9776;</button>
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="index.html#experiencias">Experiencias</a></li> 
+      <li><a href="index.html#rutas">Rutas</a></li>             
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="video-section">
+  <video autoplay muted loop>
+    <source src="https://cdn.pixabay.com/video/2023/10/05/183631-871642880_large.mp4" type="video/mp4">
+  </video>
+  <div class="video-overlay">
+    <h1>Lugano</h1>
+    <p>Lugano es una ciudad suiza encantadora, rodeada de montañas y un lago cristalino, ideal para el descanso y la exploración.</p>
+  </div>
+</section>
+
+
+<section class="actividades">
+  <h1>Actividades en Lugano</h1>
+  <div class="actividades-grid">
+    <div class="actividad">
+      <img src="https://cdn.pixabay.com/photo/2021/06/23/01/45/town-6357572_1280.jpg" alt="Lago de Lugano">
+      <p>Paseo en barco por el lago de Lugano</p>
+    </div>
+    <div class="actividad">
+      <img src="https://cdn.pixabay.com/photo/2017/10/08/19/55/lugano-2831362_1280.jpg" alt="Monte Brè">
+      <p>Ascenso al Monte Brè</p>
+    </div>
+    <div class="actividad">
+      <img src="https://cdn.pixabay.com/photo/2022/02/19/11/17/houses-7022345_1280.jpg" alt="Parques y villas">
+      <p>Visita a parques y villas históricas</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="carousel-comida">
+  <h2>Platos típicos de Lugano</h2>
+
+    <div class="carousel-container" id="carouselTrack">
+      <div class="comida-card">
+        <img src="https://api.swissmilk.ch/wp-content/uploads/2019/06/safran-risotto-mit-luganighe-2560x1919.jpg" alt="Luganighe">
+        <h3>Luganighe</h3>
+        <p>Salchicha típica del Tesino, elaborada con carne de cerdo.</p>
+        <div class="rating" data-id="sopa-harina">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+      </div>
+      <div class="comida-card">
+        <img src="https://blog.giallozafferano.it/ricettepanedolci/wp-content/uploads/2020/10/risotto-ai-funghi-1.jpeg" alt="Risotto ai funghi">
+        <h3>Risotto ai funghi</h3>
+        <p>Risotto cremoso con setas locales, muy popular en Lugano.</p>
+        <div class="rating" data-id="sopa-harina">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+      </div>
+      <div class="comida-card">
+        <img src="https://www.exploralp.com/media/k2/items/cache/f77d553c52fa954c4cb29f5292f015ef_L.jpg" alt="Polenta Ticinese">
+        <h3>Polenta Ticinese</h3>
+        <p>Polenta cocida a fuego lento, servida con queso o carne.</p>
+        <div class="rating" data-id="sopa-harina">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+      </div>
+      <div class="comida-card">
+        <img src="https://www.galbani.it/sites/default/files/styles/width_1920/public/panettone_mascarpone_980.jpg?itok=UG7-9MyS" alt="Panettone con mascarpone">
+        <h3>Panettone con mascarpone</h3>
+        <p>Postre típico de la región con crema de mascarpone.</p>
+        <div class="rating" data-id="sopa-harina">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const track = document.getElementById("carouselTrack");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  const slideWidth = 320;
+
+  nextBtn.addEventListener("click", () => {
+    track.scrollLeft += slideWidth;
+  });
+
+  prevBtn.addEventListener("click", () => {
+    track.scrollLeft -= slideWidth;
+  });
+</script>
+
+
+<section class="clima-contenedor">
+  <div class="widget-clima">
+    <h3>Tiempo de hoy</h3>
+    <div class="icono-temperatura">
+      <img src="https://img.icons8.com/ios/100/partly-cloudy-day--v1.png" alt="Clima" />
+      <div class="grados">
+        <span class="temperatura">26°</span>
+        <p class="descripcion">Mayormente soleado</p>
+      </div>
+    </div>
+ 
+  </div>
+
+  <div class="clima-texto">
+    <h2>Sobre el clima en Lugano</h2>
+    <p>
+      Lugano tiene un clima mediterráneo templado, con veranos cálidos e inviernos suaves. Es un destino ideal para actividades al aire libre todo el año.
+    </p>
+  </div>
+</section>
+
+<section class="hoteles">
+  <h2>Hoteles en Lugano</h2>
+  <div class="hotel-lista">
+    <div class="hotel">
+      <img src="https://swiss-historic-hotels.ch/bilder/hotels/hotel-splendide-royal/_AUTOxAUTO_crop_center-center_none/portrait-hotel-lugano-splendide-royal-swiss-historic-hotels-05.jpg" alt="Hotel Splendide Royal">
+      <h4>Hotel Splendide Royal</h4>
+      <p>Un lujoso hotel frente al lago con elegancia clásica y vistas espectaculares.</p>
+      <a class="btn-mapa" href="https://www.google.com/maps/place/Hotel+Splendide+Royal/@41.9079116,12.4841662,822m/data=!3m2!1e3!5s0x132f610086534bfd:0x6150f2182fdd699a!4m10!3m9!1s0x132f61007dd822df:0x37f7b77eaa439b1d!5m3!1s2025-11-02!4m1!1i2!8m2!3d41.9079116!4d12.4867411!16s%2Fg%2F1typql4p?entry=ttu&g_ep=EgoyMDI1MDgwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Ver en el mapa</a>
+    </div>
+
+    <div class="hotel">
+      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/277402794.jpg?k=83d3b613b37dd4d8bb4b2db8f1ddb59fb5020f3241495ef9af868ec5462d047a&o=&hp=1" alt="Hotel International au Lac">
+      <h4>Hotel International au Lac</h4>
+      <p>Hotel histórico en el centro de Lugano con piscina y encanto tradicional.</p>
+      <a class="btn-mapa" href="https://www.google.com/maps/place/International+au+Lac+Historic+Lakeside+Hotel/@46.0002694,8.946539,767m/data=!3m1!1e3!4m10!3m9!1s0x47842d91a231df7f:0xf99b296d78edb51d!5m3!1s2025-11-02!4m1!1i2!8m2!3d46.0002694!4d8.9491139!16s%2Fg%2F1tj958hg?entry=ttu&g_ep=EgoyMDI1MDgwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Ver en el mapa</a>
+    </div>
+
+    <div class="hotel">
+      <img src="https://www.villasassa.ch/_novaimg/4912491-1566653_0_0_2200_1400_2200_1400.webp" alt="Villa Sassa Hotel & Spa">
+      <h4>Villa Sassa Hotel & Spa</h4>
+      <p>Resort con spa, vistas al lago y excelente gastronomía en las colinas de Lugano.</p>
+      <a class="btn-mapa" href="https://www.google.com/maps/place/Villa+Sassa/@46.0124626,8.9474831,767m/data=!3m2!1e3!5s0x47843277e972cba5:0xefd23d1d318d8b75!4m10!3m9!1s0x47843277e886dfd5:0xb02ae395749904d9!5m3!1s2025-11-02!4m1!1i2!8m2!3d46.0124626!4d8.950058!16s%2Fg%2F1tjy0b_z?entry=ttu&g_ep=EgoyMDI1MDgwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Ver en el mapa</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  window.onload = function () {
+    var body = document.querySelector('body');
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      body.classList.add('active');
+    }
+  };
+</script>
+<script>
+
+  window.onload = function () {
+    const body = document.body;
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      body.classList.add('active');
+    }
+  };
+</script>
+<style>
+ 
+  html,
+  body {
+    background-color: #f0f0f0;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  body.active,
+  body.active html {
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  body.active section {
+    background-color: transparent;
+  }
+
+  body.active .actividad,
+  body.active .comida-card,
+  body.active .hotel {
+    background-color: #181818;
+    color: #ffffff;
+  }
+</style>
+<button class="btn-volver" onclick="window.history.back()">← Volver atrás</button>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const menu = document.querySelector('.menu');
+
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+</script>
+
+
+
+</body>
+</html>
