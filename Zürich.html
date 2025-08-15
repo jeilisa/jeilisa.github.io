@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zúrich - Suiza Travel</title>
+  <link rel="stylesheet" href="Zürich.css" />
+  <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/041/446/747/non_2x/switzerland-national-flag-free-png.png" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header class="header">
+  <nav class="navbar">
+    <div class="logo">
+      <span class="blanco">Switzer</span><span class="rojo">land</span>
+    </div>
+     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">&#9776;</button>
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="index.html#experiencias">Experiencias</a></li> 
+      <li><a href="index.html#rutas">Rutas</a></li>             
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<section class="video-section">
+  <video autoplay muted loop>
+    <source src="https://cdn.pixabay.com/video/2025/03/24/267171_large.mp4" type="video/mp4">
+  </video>
+  <div class="video-overlay">
+    <h1>Zúrich</h1>
+    <p>La ciudad financiera y cultural más vibrante de Suiza.</p>
+  </div>
+</section>
+
+
+<section class="actividades">
+  <h1>Actividades en Zúrich</h1>
+  <div class="actividades-grid">
+    <div class="actividad">
+      <img src="https://cdn.pixabay.com/photo/2020/03/28/07/53/zurich-4975975_1280.jpg" alt="Paseo por el lago Zúrich">
+      <p>Paseo por el lago de Zúrich</p>
+    </div>
+    <div class="actividad">
+      <img src="https://cdn.pixabay.com/photo/2018/04/12/09/31/architecture-3312918_1280.jpg" alt="Bahnhofstrasse">
+      <p>Compras en Bahnhofstrasse</p>
+    </div>
+    <div class="actividad">
+      <img src="https://cdn.pixabay.com/photo/2019/11/19/07/50/zurich-4636746_1280.jpg" alt="Iglesia Grossmünster">
+      <p>Visita al Grossmünster</p>
+    </div>
+  </div>
+</section>
+
+<section class="carousel-comida">
+  <h2>Platos típicos de Zúrich</h2>
+
+    <div class="carousel-container" id="carouselTrack">
+      <div class="comida-card">
+        <img src="https://www.daskochrezept.de/sites/daskochrezept.de/files/styles/full_width_tablet_4_3/public/2021-11/2021_zuericher-geschnetzeltes_aufmacher.jpg?h=3afb7277&itok=aqOn7laA" alt="Zürcher Geschnetzeltes">
+        <h3>Zürcher Geschnetzeltes</h3>
+        <p>Ternera en salsa cremosa con champiñones.</p>
+        <div class="rating" data-id="sopa-harina">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+      </div>
+
+      <div class="comida-card">
+        <img src="https://cdn.gutekueche.ch/media/recipe/33086/zuercher-tirggel.jpg" alt="Offleten">
+        <h3>Offleten</h3>
+        <p>Obleas sin levadura que se utilizan en celebraciones religiosas.</p>
+        <div class="rating" data-id="sopa-harina">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+      </div>
+
+      <div class="comida-card">
+        <img src="https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480/img/recipe/ras/Assets/213a755c-18d2-441a-a706-bc5530b41088/Derivates/a56057a0-ef48-49b6-8b67-199c0d55b360.jpg" alt="Tirggel">
+        <h3>Tirggel</h3>
+        <p>Un pastel seco de miel que se prepara en moldes especiales de imágenes.</p>
+        <div class="rating" data-id="sopa-harina">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+      </div>
+
+      <div class="comida-card">
+        <img src="https://thumbs.dreamstime.com/b/zuger-kirschtorte-72484686.jpg" alt="Zuger">
+        <h3>Zuger</h3>
+        <p> Pastel suizo elaborado con capas de bizcocho y merengue.</p>
+        <div class="rating" data-id="sopa-harina">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<script>
+  const track = document.getElementById("carouselTrack");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+
+  const slideWidth = 320;
+
+  nextBtn.addEventListener("click", () => {
+    track.scrollLeft += slideWidth;
+  });
+
+  prevBtn.addEventListener("click", () => {
+    track.scrollLeft -= slideWidth;
+  });
+</script>
+
+
+<section class="clima-contenedor">
+  <div class="widget-clima">
+    <h3>Tiempo de hoy</h3>
+    <div class="icono-temperatura">
+      <img src="https://img.icons8.com/ios/100/partly-cloudy-day--v1.png" alt="Clima" />
+      <div class="grados">
+        <span class="temperatura">24°</span>
+        <p class="descripcion">Parcialmente nublado</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="clima-texto">
+    <h2>Sobre el clima en Zúrich</h2>
+    <p>
+      Zúrich cuenta con un clima templado. En verano es ideal para paseos por el lago o excursiones a los Alpes cercanos. Hoy el clima es parcialmente nublado, perfecto para actividades al aire libre.
+    </p>
+  </div>
+</section>
+
+<section class="hoteles">
+  <h2>Hoteles en Zúrich</h2>
+  <div class="hotel-lista">
+
+    <div class="hotel">
+      <img src="https://media.thelivingcircle.ch/XBNKIT01/at/2tfjbhnbszqrgp8gt6kkhvp/_OPE5717_anges.jpg?format=webp&width=562&height=562&fit=crop" alt="Storchen Zürich">
+      <h4>Storchen Zürich</h4>
+      <p> es un prestigioso hotel de cinco estrellas ubicado en el corazón del casco antiguo de Zúrich, conocido por su elegancia, hospitalidad tradicional suiza y vistas al río Limmat.
+</p>
+      <a class="btn-mapa" href="https://www.google.com/maps/place/Storchen/@47.371281,8.5391991,748m/data=!3m1!1e3!4m10!3m9!1s0x47900a00aa1e1d17:0x278f576acdd580f5!5m3!1s2025-11-02!4m1!1i2!8m2!3d47.371281!4d8.541774!16s%2Fg%2F1w0sbsng?hl=es&entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Ver en el mapa</a>
+    </div>
+
+    <div class="hotel">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/21/43/7d/b-hotel-zurich-b-outside.jpg?w=900&h=500&s=1" alt="B2 Boutique Hotel">
+      <h4>B2 Boutique Hotel</h4>
+      <p>Es un hotel único en Zúrich que combina diseño moderno con historia industrial, ubicado en una antigua fábrica de cerveza y famoso por su impresionante biblioteca y ambiente exclusivo.</p>
+      <a class="btn-mapa" href="https://www.google.com/maps/place/B2+Hotel+Z%C3%BCrich/@47.3644571,8.5217938,748m/data=!3m1!1e3!4m10!3m9!1s0x479009f6e1e483b9:0x7ca9dc892e60e491!5m3!1s2025-11-02!4m1!1i2!8m2!3d47.3644571!4d8.5243687!16s%2Fg%2F1vr3c2dp?hl=es&entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Ver en el mapa</a>
+    </div>
+
+    <div class="hotel">
+      <img src="https://media-cdn.tripadvisor.com/media/photo-s/2c/21/ec/ab/exterior.jpg" alt="Hotel Glockenhof">
+      <h4>Hotel Glockenhof</h4>
+      <p>Es un moderno hotel de cuatro estrellas situado en el centro de Zúrich, que combina confort contemporáneo con hospitalidad suiza, ideal tanto para viajeros de negocios como de placer.
+</p>
+      <a class="btn-mapa" href="https://www.google.com/maps/place/Hotel+Glockenhof/@47.372905,8.5339581,748m/data=!3m2!1e3!5s0x47900a06a72ed7a7:0xb6020fff04755327!4m10!3m9!1s0x47900a069880b895:0x2c1fe3d81426573d!5m3!1s2025-11-02!4m1!1i2!8m2!3d47.372905!4d8.536533!16s%2Fg%2F1ym82p5ww?hl=es&entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Ver en el mapa</a>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  window.onload = function () {
+    var body = document.querySelector('body');
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      body.classList.add('active');
+    }
+  };
+</script>
+<script>
+
+  window.onload = function () {
+    const body = document.body;
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      body.classList.add('active');
+    }
+  };
+</script>
+<style>
+  
+  html,
+  body {
+    background-color: #f0f0f0;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  body.active,
+  body.active html {
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  body.active section {
+    background-color: transparent;
+  }
+
+  body.active .actividad,
+  body.active .comida-card,
+  body.active .hotel {
+    background-color: #181818;
+    color: #ffffff;
+  }
+</style>
+<button class="btn-volver" onclick="window.history.back()">← Volver atrás</button>
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const menu = document.querySelector('.menu');
+
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+</script>
+
+
+</body
