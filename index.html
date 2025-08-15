@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Switzerland Travel</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/041/446/747/non_2x/switzerland-national-flag-free-png.png" />
+  <style>
+    
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <nav class="navbar">
+    <div class="logo">
+      <span class="blanco">Switzer</span><span class="rojo">land</span>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">&#9776;</button>
+
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="#experiencias">Experiencias</a></li> 
+      <li><a href="#rutas">Rutas</a></li>             
+      <li><a href="#contacto">Contacto</a></li>
+      <li>
+        <div id="container">
+          <div class="toggle"></div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+  <section class="hero">
+    <div class="overlay"></div> 
+    <div class="hero-text">
+      <h1>LA MAGIA DE SUIZA</h1>
+      <p>Explora montañas, lagos y pueblos alpinos en un viaje inolvidable por el corazón de Europa.</p>
+      <button onclick="location.href='formulario.html'">PLANIFICA TU VIAJE</button>
+    </div>
+  </section>
+  
+  <section class="destinos">
+    <div class="destinos-header">
+      <h2>Mejores destinos</h2>
+      <a href="#" class="saber-mas">Saber más →</a>
+    </div>
+
+    <div class="tarjetas">
+      <a href="Ginebra.html" class="tarjeta">
+        <img src="https://cdn.pixabay.com/photo/2021/11/05/13/15/lavaux-6771369_1280.jpg" alt="Ginebra" />
+        <h3>Ginebra</h3>
+      </a>
+       <a href="Zürich.html" class="tarjeta">
+        <img src="https://cdn.pixabay.com/photo/2021/09/17/04/03/zurich-bridge-6631572_1280.jpg" alt="Zürich" />
+        <h3>Zürich</h3>
+       </a>
+     <a href="Basilea.html" class="tarjeta">
+        <img src="https://cdn.pixabay.com/photo/2020/03/26/19/47/munster-4971620_1280.jpg" alt="Basilea" />
+        <h3>Basilea</h3>
+      </a>
+      <a href="Berna.html" class="tarjeta">
+  <img src="https://cdn.pixabay.com/photo/2016/07/17/11/50/bern-1523618_1280.jpg" alt="Berna" />
+  <h3>Berna</h3>
+</a>
+    </div>
+  </section>
+
+  
+  <section class="experiencias" id="experiencias"> 
+  <h2>Más experiencias</h2>
+
+  <div class="carrusel-contenedor">
+    <button class="carrusel-btn left" onclick="moverCarrusel(-1)">‹</button>
+    <div class="carrusel-experiencias" id="carrusel">
+      <div class="card" style="background-image: url('https://cdn.pixabay.com/photo/2023/12/14/20/17/trail-8449604_1280.jpg');">
+        <p>Vacaciones de invierno</p>
+      </div>
+      <div class="card" style="background-image: url('https://cdn.pixabay.com/photo/2020/12/13/16/22/snow-5828736_1280.jpg');">
+        <p>Esquí y snowboard</p>
+      </div>
+      <div class="card" style="background-image: url('https://cdn.pixabay.com/photo/2024/01/21/12/37/chiemsee-lake-8523044_1280.jpg');">
+        <p>Invierno: Excursiones y lagos</p>
+      </div>
+      <div class="card" style="background-image: url('https://cdn.pixabay.com/photo/2021/12/21/09/40/dogs-6884916_1280.jpg');">
+        <p>Senderismo de invierno</p>
+      </div>
+      <div class="card" style="background-image: url('https://cdn.pixabay.com/photo/2020/06/14/17/46/mountain-landscape-5298732_1280.jpg');">
+        <p>Amaneceres nevados</p>
+      </div>
+      <div class="card" style="background-image: url('https://cdn.pixabay.com/photo/2020/01/05/07/22/winter-4742436_1280.jpg');">
+        <p>Montañas de invierno</p>
+      </div>
+      <div class="card" style="background-image: url('https://cdn.pixabay.com/photo/2017/09/27/01/16/koryaksky-volcano-2790656_1280.jpg');">
+        <p>Aventura en nieve profunda</p>
+      </div>
+    </div>
+    <button class="carrusel-btn right" onclick="moverCarrusel(1)">›</button>
+  </div>
+</section>
+  
+<section class="about" id="rutas"> 
+  <div class="about-container">
+    <div class="about-img">
+      <video class="video-redondeado" controls width="560" height="315">
+  <source src="Conoce_Suiza_en_tres_minutos_un_viaje_Express_V1 - Trim.mp4" type="video/mp4">
+  Tu navegador no soporta el elemento de video.
+</video>
+    </div>
+    <div class="about-text">
+      <h2>Explora Suiza</h2>
+      <p>
+        Suiza te espera con rutas fascinantes por paisajes alpinos, lagos cristalinos y encantadores pueblos de montaña.
+        Descubre recorridos en tren panorámico, caminatas por parques naturales y la magia de los glaciares en los Alpes suizos.
+        Vive una experiencia auténtica, desde Zúrich hasta Zermatt.
+      </p>
+      <a href="rutas.html" class="btn">Descubre más rutas</a>
+    </div>
+  </div>
+</section>
+
+  <footer class="footer" id="contacto">
+  <h3>Contacto</h3>
+  <p>Email: info@suizaviajes.com</p>
+  <p>Teléfono: +46 123 456 789</p>
+  <p>Dirección: Valhallavägen 136, Stockholm.</p>
+  <div class="redes">
+    <a href="#">Facebook</a> |
+    <a href="#">Instagram</a> |
+    <a href="#">YouTube</a>
+  </div>
+  <p class="copy">© 2025 Suiza Travel. Todos los derechos reservados.</p>
+</footer>
+
+  <script>
+  function moverCarrusel(direccion) {
+    const carrusel = document.getElementById("carrusel");
+    const ancho = carrusel.offsetWidth;
+    carrusel.scrollBy({
+      left: direccion * ancho * 0.8,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+<a href="#" class="chatbot-button" aria-label="Abrir ChatBot">
+  <span class="chat-icon"></span>
+  <span class="chat-text">ChatBot</span>
+</a>
+
+<link rel="stylesheet" href="toggle.css" />
+
+<script>
+  var toggle = document.getElementById('container');
+  var body = document.querySelector('body');
+
+  toggle.onclick = function () {
+    toggle.classList.toggle('active');
+    body.classList.toggle('active');
+
+    if (body.classList.contains('active')) {
+      localStorage.setItem('darkMode', 'enabled');
+    } else {
+      localStorage.setItem('darkMode', 'disabled');
+    }
+  };
+
+  window.onload = function() {
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      body.classList.add('active');
+      toggle.classList.add('active');
+    }
+  };
+</script>
+
+<a href="#" class="chatbot-button" id="chatbotToggle" aria-label="Abrir ChatBot">
+  <span class="chat-icon">ChatBot</span>
+</a>
+
+<div class="chatbot-window" id="chatbotWindow">
+  <div class="chatbot-header">
+    <img src="https://static.vecteezy.com/system/resources/previews/041/446/747/non_2x/switzerland-national-flag-free-png.png" alt="Suiza" class="chatbot-logo" />
+    <h3>Hola ¿En qué puedo ayudarte hoy?</h3>
+  </div>
+  <div class="chatbot-options">
+    <div class="chat-option"> ¿Dónde puedo experimentar eventos tradicionales?</div>
+    <div class="chat-option"> ¿Qué descuentos de viaje hay para familias?</div>
+    <div class="chat-option"> Conciertos clásicos cerca de Berna</div>
+    <div class="chat-option"> Experiencias al aire libre en Lucerna</div>
+  </div>
+  <div class="chatbot-input">
+    <input type="text" placeholder="Pregunta aquí…" />
+    <button class="chat-send-btn" aria-label="Enviar">
+  <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24" fill="#fff">
+    <path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/>
+  </svg>
+</button>
+  </div>
+</div>
+
+<script>
+  const toggleBtn = document.getElementById("chatbotToggle");
+  const chatbot = document.getElementById("chatbotWindow");
+
+  toggleBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    chatbot.style.display = chatbot.style.display === "block" ? "none" : "block";
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!chatbot.contains(e.target) && !toggleBtn.contains(e.target)) {
+      chatbot.style.display = "none";
+    }
+  });
+</script>
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const menu = document.querySelector('.menu');
+
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+</script>
+
+<audio id="bgAudio" preload="auto" loop>
+  <source src="https://orangefreesounds.com/wp-content/uploads/2023/03/Water-sounds-and-birds.mp3" type="audio/mpeg">
+  Tu navegador no soporta el elemento de audio.
+</audio>
+
+<script>
+  const audio = document.getElementById('bgAudio');
+
+  window.addEventListener('load', () => {
+    const playPromise = audio.play();
+
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        document.addEventListener('click', () => {
+          audio.play();
+        }, { once: true });
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
