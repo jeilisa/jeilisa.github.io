@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulario de Viaje</title>
+  <link rel="stylesheet" href="formulario.css" /> 
+  <link rel="icon" type="image/icon" href="https://static.vecteezy.com/system/resources/previews/041/446/747/non_2x/switzerland-national-flag-free-png.png">
+</head>
+<body>
+  
+
+  <section class="formulario-contenedor">
+    <h2>¡Déjanos tus datos y te ayudamos a cumplir este sueño!</h2>
+    <form>
+      <label>Nombre*</label>
+      <input type="text" placeholder="Nombre*" required />
+
+      <label>Apellido*</label>
+      <input type="text" placeholder="Apellidos*" required />
+
+      <label>Número de teléfono*</label>
+      <select>
+        <option>Colombia</option>
+     
+      </select>
+      <input type="tel" placeholder="+57" required />
+
+      <label>Correo electrónico*</label>
+      <input type="email" placeholder="Correo electrónico*" required />
+
+      <label>¿Cuántas personas viajan?*</label>
+      <select required>
+        <option disabled selected>Selecciona</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3 o más</option>
+      </select>
+
+      <label>¿Viajas con niños?*</label>
+      <div>
+        <input type="radio" name="ninos" required /> Sí
+        <input type="radio" name="ninos" /> No
+      </div>
+
+      <label>Acepta Política Protección de Datos*</label>
+      <div>
+        <input type="radio" name="datos" required /> Sí
+        <input type="radio" name="datos" /> No
+      </div>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+  <body>
+  
+  <video autoplay muted loop id="video-fondo">
+    <source src="https://cdn.pixabay.com/video/2022/04/20/114594-701775953_large.mp4" type="video/mp4">
+    Tu navegador no soporta video.
+  </video>
+
+ 
+  <div class="form-container">
+    <form>
+  
+    </form>
+  </div>
+
+  
+<button class="btn-volver" onclick="window.history.back()">← Volver atrás</button>
+
+
+</body>
+</html>
