@@ -1,0 +1,524 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden; 
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+.blanco {
+  color: white;
+}
+
+.rojo {
+  color: red;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+  z-index: 1;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.menu li a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: red;
+  border-radius: 4px;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.menu li a:hover::before {
+  width: 120px;
+  height: 40px;
+}
+
+.menu li a:hover {
+  color: white;
+}
+
+.hero-video {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.hero-banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 900px;
+  z-index: 3;
+  text-align: center;
+  color: white;
+}
+
+.hero-texto h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.subtitulo-hero {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-top: 10px;
+  line-height: 1.5;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ciudades {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.ciudades h2 {
+  font-size: 2.5rem;
+  color: #cc0000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.ciudad-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.ciudad {
+  width: 280px;
+  height: 420px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.ciudad:hover {
+  transform: scale(1.05);
+}
+
+.img-info-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.img-info-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s ease;
+  border-radius: 16px;
+}
+
+.ciudad:hover img {
+  opacity: 0;
+}
+
+.info-text {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(173, 11, 11, 0.95);
+  color: white;
+  opacity: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+  border-radius: 16px;
+}
+
+.ciudad:hover .info-text {
+  opacity: 1;
+}
+
+.info-text h3 {
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+/* Carrusel */
+.carousel-wrapper {
+  position: relative;
+  max-width: 960px;
+  margin: 40px auto;
+}
+
+.carousel-container {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #f70707 transparent;
+}
+
+.carousel-container::-webkit-scrollbar {
+  height: 8px;
+}
+.carousel-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+.carousel-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  padding: 0 10px;
+}
+
+.btn-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.4);
+  border: none;
+  color: white;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
+.btn-arrow:hover {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.btn-left {
+  left: 5px;
+}
+.btn-right {
+  right: 5px;
+}
+
+.mapa-y-texto {
+  display: flex;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 20px auto 40px;
+  padding: 0 20px;
+  align-items: center;
+  flex-wrap: wrap; 
+}
+
+.mapa {
+  flex: 1 1 500px;
+  min-width: 300px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.texto-mapa {
+  flex: 1 1 400px;
+  min-width: 280px;
+  font-size: 1.1rem;
+  color: #333;
+  text-align: justify;
+}
+
+.texto-mapa h3 {
+  font-size: 1.8rem;
+  color: #cc0000;
+  margin-bottom: 10px;
+}
+
+.hero-texto {
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+.subtitulo-hero {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-top: 10px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+.ciudad-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+
+
+.dark-mode {
+  background-color: #000000;
+  color: #f0f0f0;
+}
+
+.dark-mode .actividades,
+.dark-mode .hoteles,
+.dark-mode .carousel-comida,
+.dark-mode .info-general {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode .actividad,
+.dark-mode .hotel,
+.dark-mode .comida-card,
+.dark-mode .info-box,
+.dark-mode .widget-clima {
+  background-color: #1a1a1a; 
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+  color: #ddd;
+}
+
+.dark-mode a,
+.dark-mode .menu li a {
+  color: #ff4c4c; 
+}
+
+.dark-mode .menu li a::before {
+  background: #ff4c4c;
+}
+
+.dark-mode .btn-mapa {
+  background-color: #ff4c4c;
+  color: #000;
+}
+
+.dark-mode .btn-mapa:hover {
+  background-color: #cc0000;
+  color: #fff;
+}
+
+
+.dark-mode .actividad:hover,
+.dark-mode .hotel:hover {
+  box-shadow: 0 12px 25px rgba(255, 76, 76, 0.5);
+}
+.dark-mode {
+  background-color: black !important;
+  color: white !important;
+}
+
+
+.dark-mode .navbar {
+  background-color: black !important;
+}
+
+.dark-mode .menu li a {
+  color: white !important;
+}
+
+.dark-mode .actividad {
+  background-color: #222 !important;
+  color: white !important;
+}
+
+.actividad,
+.comida-card,
+.hotel {
+  background-color: #fff;
+  color: #000;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(61, 60, 60, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+body.active .actividad,
+body.active .comida-card,
+body.active .hotel {
+  background-color: #1f1f1f;
+  color: #f0f0f0;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+}
+
+
+body.active .actividad p,
+body.active .comida-card p,
+body.active .comida-card h3,
+body.active .hotel h4,
+body.active .hotel p {
+  color: #e0e0e0;
+}
+body.active .clima-texto h2,
+body.active .clima-texto p {
+  color: #ffffff !important;
+}
+
+.ubicacion-descripcion p {
+  color: #222; 
+  transition: color 0.3s;
+}
+
+body.active .ubicacion-descripcion p {
+  color: #fff;
+}
+
+body.active .texto-mapa {
+  color: white;
+}
+
+.btn-volver {
+  position: fixed;     
+  bottom: 20px;         
+  left: 20px;           
+  background-color: #c00000;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;  
+  z-index: 1000;       
+  width: auto;        
+  transition: background-color 0.3s ease;
+}
+
+.btn-volver:hover {
+  background-color: #950505;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1100;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+
+  .menu {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(172, 0, 0, 0.95);
+  position: fixed;
+  top: 60px;
+  right: 15px;
+  width: 200px; 
+  padding: 15px 0;
+  gap: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1050;
+
+  transform: translateY(-20px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+  .menu.show {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .menu li a {
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
