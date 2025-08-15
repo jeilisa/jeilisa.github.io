@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Basilea - Suiza Travel</title>
+  <link rel="stylesheet" href="Basilea.css" />
+  <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/041/446/747/non_2x/switzerland-national-flag-free-png.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      background-color: #f0f0f0;
+      color: #000000;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.active {
+      background-color: #121212;
+      color: #ffffff;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="header">
+  <nav class="navbar">
+    <div class="logo">
+      <span class="blanco">Switzer</span><span class="rojo">land</span>
+    </div>
+     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">&#9776;</button>
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="index.html#experiencias">Experiencias</a></li> 
+      <li><a href="index.html#rutas">Rutas</a></li>             
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="video-section">
+  <video autoplay muted loop>
+    <source src="https://cdn.pixabay.com/video/2017/12/18/13473-248644893_large.mp4" type="video/mp4">
+  </video>
+  <div class="video-overlay">
+    <h1>Basilea</h1>
+    <p>La vibrante ciudad cultural y fronteriza de Suiza.</p>
+  </div>
+</section>
+
+<section class="actividades">
+  <h1>Actividades en Basilea</h1>
+  <div class="actividades-grid">
+    <div class="actividad">
+      <img src="https://mein.toubiz.de/api/v1/media/b259e60d-3252-46d6-af2a-a97e34f6a7eb/view" alt="Basler Münster">
+      <p>Paseo por el casco antiguo</p>
+    </div>
+    <div class="actividad">
+      <img src="https://tripaim.com/blog/wp-content/uploads/2021/06/Mittlere-Brucke-1.jpg" alt="Puente Mittlere Brucke">
+      <p>Visita al Kunstmuseum</p>
+    </div>
+    <div class="actividad">
+      <img src="https://cdn.pixabay.com/photo/2018/06/04/18/32/rhine-river-3453860_1280.jpg" alt="Río Rin en Basilea">
+      <p>Paseo junto al río Rin</p>
+    </div>
+  </div>
+</section>
+
+<section class="carousel-comida">
+  <h2>Platos típicos Basilea</h2>
+
+
+
+    <div class="carousel-container" id="carouselTrack">
+
+      <div class="comida-card">
+        <img src="https://www.maxionline.ec/wp-content/uploads/2018/03/shutterstock_219512482-1024x684.jpg" alt="sopa de harina de Basilea">
+        <h3>Sopa de harina de Basilea</h3>
+        <p>Se sirve junto con pasteles de queso y de cebollas.</p>
+        <div class="rating" data-id="sopa-harina">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+      </div>
+
+      <div class="comida-card">
+        <img src="https://cdn.christmas-cookies.com/wp-content/uploads/2020/03/basler-leckerli.jpg" alt="Basler Leckerli">
+        <h3>Basler Leckerli</h3>
+        <p>Unas galletas de especias finas, duras y glaseadas.</p>
+        <div class="rating" data-id="basler-leckerli">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+      </div>
+
+      <div class="comida-card">
+        <img src="https://i1.wp.com/tripgourmets.com/wp-content/uploads/2016/11/DSCF0203.jpg?resize=1024%2C683&ssl=1" alt="Mässmogge">
+        <h3>Mässmogge</h3>
+        <p>Bombones de azúcar, rellenadas con avellanas.</p>
+        <div class="rating" data-id="massmogge">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+      </div>
+
+      <div class="comida-card">
+        <img src="https://farm9.staticflickr.com/8501/8392497986_73e4598b20.jpg" alt="Suuri Lääberli">
+        <h3>Suuri Lääberli</h3>
+        <p>Hígado de ternera con cebolla crujiente y salsa balsámica.</p>
+        <div class="rating" data-id="suuri-laaeberli">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="hoteles">
+  <h2>Hoteles en Basilea</h2>
+  <div class="hotel-lista">
+
+    <div class="hotel">
+      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/653405685.jpg?k=07607dbdb28776e5c0863b4ad37e19f39eb6b92ae5696555c508c6b95c63e00c&o=&hp=16" alt="Movenpick Hotel Basel">
+      <h4>Movenpick Hotel Basel</h4>
+      <p>Es un elegante hotel de cinco estrellas que combina diseño contemporáneo con hospitalidad de suiza en el corazón de Basilea.</p>
+      <a class="btn-mapa" href="https://www.google.com/maps/place/Movenpick+Hotel+Basel/@47.5498335,7.5874782,746m/data=!3m1!1e3!4m12!3m11!1s0x4791b91f5c4eed25:0xc7390f120a9af42c!5m3!1s2025-11-02!4m1!1i2!8m2!3d47.5493484!4d7.59251!9m1!1b1!16s%2Fg%2F11j8xjlf1f?hl=es&entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Ver en el mapa</a>
+    </div>
+
+    <div class="hotel">
+      <img src="https://mshanken.imgix.net/cao/bolt/2019-05/goodlife1-ca0519.jpg" alt="Hotel Les Trois Rois">
+      <h4>Hotel Les Trois Rois</h4>
+      <p>Es un histórico hotel de lujo ubicado a orillas del Rin, que combina elegancia clásica con un servicio excepcional en el corazón de Basilea.</p>
+      <a class="btn-mapa" href="https://www.google.com/maps/place/Hotel+Les+Trois+Rois/@47.5598331,7.5856444,745m/data=!3m1!1e3!4m17!1m5!2m4!1sGrand+Hotel+Les+Trois+Rois!5m2!5m1!1s2025-11-02!3m10!1s0x4791b9af3cd634f5:0xab0c16bddd420ffb!5m3!1s2025-11-02!4m1!1i2!8m2!3d47.5604387!4d7.5876472!15sChpHcmFuZCBIb3RlbCBMZXMgVHJvaXMgUm9pc1ocIhpncmFuZCBob3RlbCBsZXMgdHJvaXMgcm9pc5IBBWhvdGVsqgFCEAEyHhABIhr4PLy9Vaw24JM7_awffce-O2d926cwj4ohLTIeEAIiGmdyYW5kIGhvdGVsIGxlcyB0cm9pcyByb2lz4AEA!16s%2Fg%2F120l2jmw?hl=es&entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Ver en el mapa</a>
+    </div>
+
+    <div class="hotel">
+      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/633446992.jpg?k=441685b0d84e5830d2eb6a3d12dcff96c4780dc67b9a8c5521783a239287051a&o=&hp=1" alt="Royal Hotel">
+      <h4>Royal Hotel</h4>
+      <p>Alojamiento sofisticado que ofrece confort moderno y un servicio personalizado en una ubicación privilegiada de Basilea.</p>
+      <a class="btn-mapa" href="https://www.google.com/maps/place/Royal-Hotel/@47.5661778,7.6042907,745m/data=!3m1!1e3!4m10!3m9!1s0x4791b9c0b45652df:0x6a46ab9cdc4c5d10!5m3!1s2025-11-02!4m1!1i2!8m2!3d47.5661778!4d7.6068656!16s%2Fg%2F1tkc5m1l?hl=es&entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Ver en el mapa</a>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  window.onload = function () {
+    var body = document.querySelector('body');
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      body.classList.add('active');
+    }
+  };
+</script>
+<script>
+  window.onload = function () {
+    const body = document.body;
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      body.classList.add('active');
+    }
+  };
+</script>
+<style>
+ 
+  html,
+  body {
+    background-color: #f0f0f0;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  body.active,
+  body.active html {
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  body.active section {
+    background-color: transparent;
+  }
+
+  body.active .actividad,
+  body.active .comida-card,
+  body.active .hotel {
+    background-color: #181818;
+    color: #ffffff;
+  }
+</style>
+<button class="btn-volver" onclick="window.history.back()">← Volver atrás</button>
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const menu = document.querySelector('.menu');
+
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+</script>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const ratings = document.querySelectorAll('.rating');
+
+    ratings.forEach(rating => {
+      const stars = rating.querySelectorAll('.star');
+
+      stars.forEach((star, index) => {
+        star.addEventListener('click', () => {
+  
+          stars.forEach(s => s.classList.remove('selected'));
+
+
+          for (let i = 0; i <= index; i++) {
+            stars[i].classList.add('selected');
+          }
+
+          const value = star.getAttribute('data-value');
+          const dishId = rating.getAttribute('data-id');
+          console.log(`Plato ${dishId} calificado con ${value} estrellas`);
+
+          localStorage.setItem(`rating-${dishId}`, value);
+        });
+
+        const savedRating = localStorage.getItem(`rating-${rating.getAttribute('data-id')}`);
+        if (savedRating) {
+          for (let i = 0; i < savedRating; i++) {
+            stars[i].classList.add('selected');
+          }
+        }
+      });
+    });
+  });
+</script>
+
+<script>
+  const track = document.getElementById("carouselTrack");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+
+  const slideWidth = 320; 
+
+  nextBtn.addEventListener("click", () => {
+    track.scrollLeft += slideWidth;
+  });
+
+  prevBtn.addEventListener("click", () => {
+    track.scrollLeft -= slideWidth;
+  });
+</script>
+
+</body>
+</html>
