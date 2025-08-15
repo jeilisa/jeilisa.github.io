@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #f8f8f8;
+}
+
+#container {
+  background-color: #f8f8f8;
+  position: relative;
+  width: 60px;
+  height: 30px;
+  margin: 5px auto; 
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: none;
+  border: 1px solid #ccc;
+}
+
+.toggle {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 26px;
+  height: 26px;
+  background-color: red;
+  border-radius: 50%;
+  box-shadow: none;
+  transition: left 0.3s ease;
+}
+
+
+#container.active .toggle {
+  left: calc(100% - 28px); 
+}
+
+
+body.active {
+  background-color: rgb(23, 23, 23);
+}
+
