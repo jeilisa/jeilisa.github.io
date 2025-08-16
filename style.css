@@ -956,40 +956,60 @@ body.active .audio-section p {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1100;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+
   .menu {
-    display: none;
-    flex-direction: column;
-    background-color: rgba(172, 0, 0, 0.95);
-    position: absolute;
-    top: 60px; /* justo debajo del navbar */
-    right: 15px; /* separarlo del borde derecho */
-    width: 200px;
-    padding: 15px 0;
-    gap: 10px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    z-index: 1050;
-  }
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(172, 0, 0, 0.95);
+  position: fixed;
+  top: 60px;
+  right: 15px;
+  width: 200px; 
+  padding: 15px 0;
+  gap: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1050;
+
+  transform: translateY(-20px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
 
   .menu.show {
-    display: flex;
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .menu li a {
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
   }
 
   .menu-toggle {
     display: block;
-    position: absolute;
-    top: 18px;
-    right: 20px;
-    font-size: 28px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    z-index: 1101;
-  }
-
-  .navbar {
-    position: relative; /* Necesario para posicionar el menú respecto al navbar */
   }
 }
