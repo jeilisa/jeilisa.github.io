@@ -762,6 +762,8 @@ body.active .clima-texto p {
 
 /* Base general */
 .comida-card {
+  background-color: #ffffff;
+  color: #333333;
   border-radius: 12px;
   padding: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -772,6 +774,7 @@ body.active .clima-texto p {
   align-items: center;
   justify-content: space-between;
 }
+
 
 /* Modo claro */
 @media (prefers-color-scheme: light) {
