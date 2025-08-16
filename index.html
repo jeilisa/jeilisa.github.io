@@ -233,21 +233,32 @@
   Tu navegador no soporta el elemento de audio.
 </audio>
 
+<!-- AUDIO OCULTO EN BUCLE -->
+<audio id="bgAudio" autoplay loop>
+  <source src="https://orangefreesounds.com/wp-content/uploads/2023/03/Water-sounds-and-birds.mp3" type="audio/mpeg" />
+  Tu navegador no soporta el audio.
+</audio>
+
+
 <script>
-  const audio = document.getElementById('bgAudio');
+  const audio = document.getElementById("bgAudio");
+  const btn = document.getElementById("toggleAudioBtn");
 
-  window.addEventListener('load', () => {
-    const playPromise = audio.play();
-
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        document.addEventListener('click', () => {
+  // Reproduce audio al cargar (algunos navegadores solo permiten tras interacción)
+  window.addEventListener("load", () => {
+    const promise = audio.play();
+    if (promise !== undefined) {
+      promise.catch(() => {
+        document.addEventListener("click", () => {
           audio.play();
         }, { once: true });
       });
     }
   });
+
 </script>
+
+
 
 </body>
 </html>
