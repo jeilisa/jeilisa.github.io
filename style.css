@@ -956,18 +956,20 @@ body.active .audio-section p {
   cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .menu {
     display: none;
     flex-direction: column;
-    background-color: rgb(205, 0, 0);
+    background-color: rgba(172, 0, 0, 0.95);
     position: absolute;
-    top: 60px;
-    right: 20px;
+    top: 60px; /* justo debajo del navbar */
+    right: 15px; /* separarlo del borde derecho */
     width: 200px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    border-radius: 8px;
-    z-index: 999;
+    padding: 15px 0;
+    gap: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1050;
   }
 
   .menu.show {
@@ -976,93 +978,18 @@ body.active .audio-section p {
 
   .menu-toggle {
     display: block;
-  }
-}
-
-@media (max-width: 768px) {
-  .menu {
-    flex-direction: column;
-    width: 220px;
-    height: auto;
-    padding-top: 30px;
-    box-shadow: none;
-    border-radius: 0 0 0 12px;
-    position: fixed;
-    top: 60px;
-    left: 0;
-    background-color: rgba(172, 0, 0, 0.95);
-    gap: 25px;
-  }
-  
-  .menu li a {
-    font-size: 1.1rem;
-    padding: 12px 20px;
-  }
-  
-  .main-title, .main-description, .main-button {
-    text-align: center;
-  }
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  z-index: 1100;
-  position: relative;
-}
-
-@media screen and (max-width: 768px) {
-
-  .menu {
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(172, 0, 0, 0.95);
-  position: fixed;
-  top: 60px;
-  right: 15px;
-  width: 200px; 
-  padding: 15px 0;
-  gap: 10px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  z-index: 1050;
-
-  transform: translateY(-20px);
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0;
-  pointer-events: none;
-}
-
-  .menu.show {
-    transform: translateX(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .menu li a {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 28px;
+    background: none;
+    border: none;
     color: white;
-    font-weight: 600;
-    font-size: 1.1rem;
-    padding: 12px 20px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
+    z-index: 1101;
   }
 
-  .menu li a:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    color: white;
-  }
-
-
-  .menu-toggle {
-    display: block;
+  .navbar {
+    position: relative; /* Necesario para posicionar el menú respecto al navbar */
   }
 }
-
-
-
-
