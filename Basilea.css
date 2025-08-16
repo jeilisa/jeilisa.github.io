@@ -794,3 +794,21 @@ body.active .clima-texto p {
     color: #fff;
   }
 }
+
+.comida-card {
+  background: #1a1a1a;
+  color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  .comida-card {
+    background: #1a1a1a;
+    color: white;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .comida-card {
+    background: white;
+    color: black;
+  }
+}
