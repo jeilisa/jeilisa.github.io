@@ -759,27 +759,6 @@ body.active .clima-texto p {
   margin: 0 auto; 
 }
 
-@media (prefers-color-scheme: light) {
-  .carousel-comida {
-    background-color: #f2f2f2; 
-  }
-
-  .comida-card {
-    background-color: #ffffff;
-    color: #000; 
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .carousel-comida {
-    background-color: #000; 
-  }
-
-  .comida-card {
-    background-color: #1a1a1a;
-    color: #fff;
-  }
-}
 
 /* Base general */
 .comida-card {
