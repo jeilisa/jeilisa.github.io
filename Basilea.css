@@ -747,20 +747,6 @@ body.active .clima-texto p {
   }
 }
 
-.comida-card {
-  background: #1a1a1a;
-  color: white;
-  border-radius: 12px;
-  padding: 15px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-  text-align: center;
-  width: 250px; 
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
 
 .carousel-container {
   display: flex;
@@ -795,20 +781,3 @@ body.active .clima-texto p {
   }
 }
 
-.comida-card {
-  background: #1a1a1a;
-  color: white;
-}
-
-@media (prefers-color-scheme: dark) {
-  .comida-card {
-    background: #1a1a1a;
-    color: white;
-  }
-}
-@media (prefers-color-scheme: light) {
-  .comida-card {
-    background: white;
-    color: black;
-  }
-}
