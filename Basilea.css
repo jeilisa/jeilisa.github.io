@@ -776,18 +776,3 @@ body.active .clima-texto p {
 }
 
 
-/* Modo claro */
-@media (prefers-color-scheme: light) {
-  .comida-card {
-    background: white;
-    color: black;
-  }
-}
-
-/* Modo oscuro */
-@media (prefers-color-scheme: dark) {
-  .comida-card {
-    background: #1a1a1a;
-    color: white;
-  }
-}
