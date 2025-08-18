@@ -264,5 +264,35 @@
   });
 </script>
 
+<audio id="bgAudio" autoplay loop style="display: none;">
+  <source src="https://orangefreesounds.com/wp-content/uploads/2023/03/Water-sounds-and-birds.mp3" type="audio/mpeg" />
+</audio>
+
+<script>
+  // Guardar el tiempo antes de salir
+  window.addEventListener('beforeunload', () => {
+    const audio = document.getElementById('bgAudio');
+    localStorage.setItem('audioTime', audio.currentTime);
+  });
+
+  // Reanudar al cargar la nueva página
+  window.addEventListener('load', () => {
+    const audio = document.getElementById('bgAudio');
+    const savedTime = localStorage.getItem('audioTime');
+
+    if (savedTime && audio) {
+      audio.currentTime = parseFloat(savedTime);
+      audio.play().catch(() => {
+        // Requiere interacción del usuario
+        document.addEventListener('click', () => {
+          audio.play();
+        }, { once: true });
+      });
+    }
+  });
+</script>
+
+
+
 </body>
 </html>
