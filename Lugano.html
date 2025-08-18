@@ -229,7 +229,40 @@
   });
 </script>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const ratings = document.querySelectorAll('.rating');
 
+    ratings.forEach(rating => {
+      const stars = rating.querySelectorAll('.star');
+
+      stars.forEach((star, index) => {
+        star.addEventListener('click', () => {
+  
+          stars.forEach(s => s.classList.remove('selected'));
+
+
+          for (let i = 0; i <= index; i++) {
+            stars[i].classList.add('selected');
+          }
+
+          const value = star.getAttribute('data-value');
+          const dishId = rating.getAttribute('data-id');
+          console.log(`Plato ${dishId} calificado con ${value} estrellas`);
+
+          localStorage.setItem(`rating-${dishId}`, value);
+        });
+
+        const savedRating = localStorage.getItem(`rating-${rating.getAttribute('data-id')}`);
+        if (savedRating) {
+          for (let i = 0; i < savedRating; i++) {
+            stars[i].classList.add('selected');
+          }
+        }
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
